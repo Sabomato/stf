@@ -10,12 +10,12 @@ PUBLIC_ADDR=$(ifconfig eth0 | grep 'inet ' | awk '{print $2}')
 
 
 
-if [ $# -eq 1 ] #no arguments provided, it's assumed everything is running on the same machine, so no poorxy required
+if [ $# == 1 ]
 then
     APP_IP=$1
     APP_URL="http://$APP_IP:$DEFAULT_APP_PORT/"
     (stf poorxy --port 7100 --app-url http://$DEFAULT_APP_IP:7105/ --auth-url http://$AUTH_ADDR:7120/ --api-url http://$DEFAULT_APP_IP:7106/ --websocket-url http://$WEB_SOCKET_ADDR:7110/ --storage-url http://$DB_ADDR:7102/ --storage-plugin-image-url http://$DB_ADDR:7103/ --storage-plugin-apk-url http://$DB_ADDR:7104/)
-else   
+else    #no arguments provided, it's assumed everything is running on the same machine, so no poorxy required
     APP_URL="http://$DEFAULT_APP_IP:$DEFAULT_APP_PORT/"
     echo "App ip not provided,default url is \"$APP_URL\""
 
