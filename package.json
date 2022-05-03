@@ -1,6 +1,6 @@
 {
   "name": "@devicefarmer/stf",
-  "version": "3.6.2",
+  "version": "3.6.4",
   "description": "Smartphone Test Farm",
   "keywords": [
     "adb",
@@ -33,7 +33,7 @@
     "prepare": "bower install && not-in-install && gulp build || in-install"
   },
   "dependencies": {
-    "@devicefarmer/adbkit": "^3.2.2",
+    "@devicefarmer/adbkit": "^2.11.3",
     "@devicefarmer/adbkit-apkreader": "^3.2.3",
     "@devicefarmer/adbkit-monkey": "^1.2.0",
     "@devicefarmer/minicap-prebuilt": "^2.7.1",
@@ -45,7 +45,7 @@
     "@devicefarmer/stf-wiki": "^1.0.0",
     "@julusian/jpeg-turbo": "^0.5.4",
     "@slack/client": "^3.5.4",
-    "android-device-list": "^1.2.1",
+    "android-device-list": "^1.2.7",
     "aws-sdk": "^2.4.13",
     "basic-auth": "^1.0.3",
     "bluebird": "^2.10.1",
